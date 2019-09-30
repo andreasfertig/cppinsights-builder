@@ -2,6 +2,8 @@ FROM andreasfertig/cppinsights-docker-base:latest
 
 LABEL maintainer "Andreas Fertig"
 
+ENV CLANG_VERSION=${CLANG_VERSION}
+
 # Install compiler, python
 RUN apt-get update && \
     apt-get install -y --no-install-recommends ninja-build git llvm-${CLANG_VERSION}-dev g++-8 cmake zlib1g-dev doxygen graphviz python2.7 && \
