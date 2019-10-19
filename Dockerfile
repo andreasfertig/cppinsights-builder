@@ -38,4 +38,4 @@ RUN apt-get update &&                                                          \
     ln -fs /usr/bin/gcc-${GCC_VERSION} /usr/bin/gcc && \
     ln -fs /usr/bin/gcc-${GCC_VERSION} /usr/bin/cc && \
     rm -rf /var/lib/apt/lists/* &&                                             \
-    ln -fs /usr/bin/gcov-8 /usr/bin/gcov
+    ln -fs /usr/bin/gcov-${GCC_VERSION} /usr/bin/gcov
