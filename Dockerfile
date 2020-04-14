@@ -7,7 +7,7 @@ ENV GCC_VERSION=${GCC_VERSION}
 
 # Install compiler, python
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends ninja-build git llvm-${CLANG_VERSION}-dev g++-${GCC_VERSION} cmake zlib1g-dev doxygen graphviz python2.7 && \
+    apt-get install -y --no-install-recommends ninja-build git llvm-${CLANG_VERSION}-dev g++-${GCC_VERSION} cmake zlib1g-dev doxygen graphviz && \
     rm -rf /var/lib/apt/lists/*
 
 RUN useradd builder \
@@ -20,7 +20,7 @@ RUN ln -fs /usr/bin/g++-${GCC_VERSION} /usr/bin/g++
 RUN ln -fs /usr/bin/g++-${GCC_VERSION} /usr/bin/c++
 RUN ln -fs /usr/bin/gcc-${GCC_VERSION} /usr/bin/gcc
 RUN ln -fs /usr/bin/gcc-${GCC_VERSION} /usr/bin/cc
-RUN ln -fs /usr/bin/python2.7 /usr/bin/python
+RUN ln -fs /usr/bin/python3 /usr/bin/python
 
 # We need this for now to build a more recent version of lcov
 RUN apt-get update &&                                                          \
