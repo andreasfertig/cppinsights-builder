@@ -7,7 +7,7 @@ ENV GCC_VERSION=${GCC_VERSION}
 
 # Install compiler, python
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends ninja-build git llvm-${CLANG_VERSION}-dev g++-${GCC_VERSION} cmake zlib1g-dev doxygen graphviz && \
+    apt-get install -y --no-install-recommends ninja-build git llvm-${CLANG_VERSION}-dev g++-${GCC_VERSION} cmake zlib1g-dev doxygen graphviz curl && \
     rm -rf /var/lib/apt/lists/*
 
 RUN useradd builder \
