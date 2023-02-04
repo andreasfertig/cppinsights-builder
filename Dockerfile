@@ -9,7 +9,7 @@ ARG DEBIAN_FRONTEND=noninteractive
 
 # Install compiler, python
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends ninja-build git llvm-${CLANG_VERSION}-dev g++-${GCC_VERSION} lcov cmake zlib1g-dev doxygen graphviz curl && \
+    apt-get install -y --no-install-recommends ninja-build git llvm-${CLANG_VERSION}-dev g++-${GCC_VERSION} libpolly-${CLANG_VERSION}-dev lcov cmake zlib1g-dev doxygen graphviz curl && \
     rm -rf /var/lib/apt/lists/*
 
 RUN useradd builder \
